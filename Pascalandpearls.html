@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pascal and Pearls | Handmade Beaded Jewelry</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;1,700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --gold: #C5A059; /* More muted, expensive-looking metallic gold */
+            --dark-bg: #0D0D0D; 
+            --card-bg: #161616;
+            --text-main: #FFFFFF;
+            --text-secondary: #A0A0A0;
+            --font-heading: 'Bodoni Moda', serif;
+            --font-body: 'Montserrat', sans-serif;
+        }
+
+        * { box-sizing: border-box; }
+        body { 
+            margin: 0; 
+            font-family: var(--font-body); 
+            background: var(--dark-bg); 
+            color: var(--text-main); 
+            line-height: 1.6;
+        }
+
+        /* Announcement Bar */
+        .announcement {
+            background: var(--gold);
+            color: black;
+            text-align: center;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 8px 0;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Minimalist Header */
+        header {
+            padding: 30px;
+            text-align: center;
+            background: rgba(13, 13, 13, 0.95);
+            position: sticky; 
+            top: 0; 
+            z-index: 1000;
+            border-bottom: 0.5px solid #333;
+        }
+        .logo { 
+            font-family: var(--font-heading);
+            font-size: 36px; 
+            letter-spacing: 2px; 
+            color: var(--text-main); 
+            text-decoration: none;
+        }
+        .tagline { 
+            font-size: 9px; 
+            letter-spacing: 3px; 
+            color: var(--gold); 
+            margin-top: 5px; 
+            text-transform: uppercase;
+        }
+
+        /* Hero Image */
+        .hero {
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=80'); /* Replace with your jewelry photo */
+            background-size: cover;
+            background-position: center;
+        }
+        .hero h1 { 
+            font-family: var(--font-heading); 
+            font-size: clamp(40px, 8vw, 70px); 
+            margin: 0; 
+        }
+
+        /* Grid Layout like BeMinimalist */
+        .container { padding: 60px 5%; max-width: 1400px; margin: auto; }
+        .section-title {
+            text-align: left;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 40px;
+            font-family: var(--font-heading);
+            font-size: 24px;
+        }
+
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+            gap: 20px; 
+        }
+
+        .product-card { 
+            background: var(--card-bg); 
+            border: 1px solid #222; 
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .product-card:hover { border-color: var(--gold); transform: translateY(-5px); }
+        
+        /* Product Image Space */
+        .product-img { 
+            width: 100%; 
+            aspect-ratio: 1/1; 
+            background: #252525; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #444;
+        }
+
+        .product-info { padding: 20px; }
+        .product-info h3 { font-size: 16px; margin: 0 0 5px 0; font-weight: 400; letter-spacing: 1px; }
+        .materials { font-size: 11px; color: var(--text-secondary); text-transform: uppercase; margin-bottom: 10px; }
+        .price { font-size: 18px; color: var(--gold); margin-bottom: 15px; }
+
+        .btn {
+            background: transparent;
+            color: var(--gold);
+            padding: 12px;
+            border: 1px solid var(--gold);
+            width: 100%;
+            cursor: pointer;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+        .btn:hover { background: var(--gold); color: black; }
+
+        /* Heritage Branding */
+        .heritage {
+            padding: 100px 10%;
+            text-align: center;
+            background: #111;
+            margin-top: 50px;
+        }
+        .heritage h2 { font-family: var(--font-heading); font-size: 32px; color: var(--gold); }
+        .heritage p { color: var(--text-secondary); max-width: 700px; margin: 20px auto; font-style: italic; }
+
+    </style>
+</head>
+<body>
+
+    <div class="announcement">Free Shipping on your first handmade piece ✨</div>
+
+    <header>
+        <a href="#" class="logo">Pascal & Pearls</a>
+        <div class="tagline">Everyday Elegance, Handmade for You</div>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h1>The Pearl Era.</h1>
+            <p>Thoughtfully crafted. Honestly priced.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <h2 class="section-title">Shop Our Essentials</h2>
+        <div class="grid">
+            <div class="product-card">
+                <div class="product-img">IMAGE OF PEARL STRAND</div>
+                <div class="product-info">
+                    <div class="materials">Glass Beads + 14k Gold Plated</div>
+                    <h3>The Pascal Signature</h3>
+                    <div class="price">₹499.00</div>
+                    <button class="btn">Add to Bag</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">IMAGE OF BRACELET</div>
+                <div class="product-info">
+                    <div class="materials">Freshwater Shell + Silk Thread</div>
+                    <h3>Midnight Dew Bracelet</h3>
+                    <div class="price">₹299.00</div>
+                    <button class="btn">Add to Bag</button>
+                </div>
+            </div>
+             <div class="product-card">
+                <div class="product-img">IMAGE OF CHOKER</div>
+                <div class="product-info">
+                    <div class="materials">Ceramic Beads + Adjustable Clasp</div>
+                    <h3>Ethereal Choker</h3>
+                    <div class="price">₹349.00</div>
+                    <button class="btn">Add to Bag</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="heritage">
+        <h2>Hand-Strung Heritage</h2>
+        <p>"Dedicated to the legacy of C. Pascal Mary. We don't just sell beads; we share a tradition of patience, beauty, and craftsmanship that feels like home."</p>
+    </section>
+
+</body>
+</html>
